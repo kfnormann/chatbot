@@ -2,12 +2,12 @@ const express = require('express');
 const axios = require('axios');
 const dotenv = require('dotenv');
 const path = require('path');
-const sleep = require('sleep'); // Import sleep for introducing delay
+
 
 dotenv.config();
 
 const app = express();
-const port = 3000;
+//const port = 3000;
 
 // Middleware to serve static files (HTML, CSS, JS)
 app.use(express.static(path.join(__dirname, 'public')));
@@ -70,6 +70,6 @@ app.post('/chat', async (req, res) => {
 });
 
 // Start server
-app.listen(port, () => {
-  console.log(`Server running on http://localhost:${port}`);
+//app.listen(port, () => {
+//  console.log(`Server running on http://localhost:${port}`);
 });
